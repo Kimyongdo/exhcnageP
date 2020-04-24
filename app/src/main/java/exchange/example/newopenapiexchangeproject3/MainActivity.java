@@ -94,8 +94,9 @@ public class MainActivity extends AppCompatActivity {
     TextView navUsername;
     CircleImageView navUserimage;
 
-    //플로팅버튼
+    //fabBtn
     private FloatingActionMenu fab;
+
     //toolbar, draw, navigation
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
@@ -181,11 +182,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerAdapter = new MainRecylcerAdapter(datasCopy,this);
         recyclerView.setAdapter(recyclerAdapter);
 
-        /////////////////////////////////////////네비게이션//////////////////////////////////////////////////////////////////
+        //네비게이션 이동하는 부분
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
                 switch (item.getItemId()){
                     case R.id.menu_note :
                         Intent intent = new Intent(MainActivity.this,NoteMain.class);
@@ -565,7 +565,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, CalCalculator.class);
             startActivity(intent);
         }else{
-            Toast.makeText(context, "공휴일에는 사용할 수 없습니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "공휴일에는 사용할 수 없습니다.", Toast.LENGTH_SHORT).show();
         }
     }
 
