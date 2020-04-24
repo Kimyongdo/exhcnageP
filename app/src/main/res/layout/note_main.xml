@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_drawer"
+    tools:context="exchange.example.newopenapiexchangeproject3.NoteMain">
+
+
+    <!--                             제목 영역                               -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/AppTheme.Toolbar">
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <!--                              본문영역                                    -->
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+
+                    android:id="@+id/note_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    >
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/flaotingActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                app:menu_fab_size="normal"
+                app:menu_showShadow="true"
+                app:menu_shadowColor="#66000000"
+                app:menu_shadowRadius="3dp"
+                app:menu_shadowXOffset="1dp"
+                app:menu_shadowYOffset="1dp"
+                app:menu_colorNormal="#41AF39"
+                app:menu_colorPressed="#41AF39"
+                app:menu_colorRipple="#99FFFFFF"
+                app:menu_animationDelayPerItem="50"
+                app:menu_icon="@drawable/fab_add"
+                app:menu_buttonSpacing="0dp"
+                app:menu_labels_margin="0dp"
+                app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+                app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+                app:menu_labels_paddingTop="4dp"
+                app:menu_labels_paddingRight="8dp"
+                app:menu_labels_paddingBottom="4dp"
+                app:menu_labels_paddingLeft="8dp"
+                app:menu_labels_padding="8dp"
+                app:menu_labels_textColor="#FFFFFF"
+                app:menu_labels_textSize="14sp"
+                app:menu_labels_cornerRadius="3dp"
+                app:menu_labels_colorNormal="#333333"
+                app:menu_labels_colorPressed="#444444"
+                app:menu_labels_colorRipple="#66FFFFFF"
+                app:menu_labels_showShadow="true"
+                app:menu_labels_singleLine="false"
+                app:menu_labels_ellipsize="none"
+                app:menu_labels_maxLines="-1"
+                app:menu_labels_position="left"
+                app:menu_openDirection="up"
+                app:menu_backgroundColor="#BFEAEAEA"
+                app:menu_fab_show_animation="@anim/rotate"
+                app:menu_fab_hide_animation="@anim/rotate_reverse"
+                android:layout_gravity="bottom|right"
+                >
+
+                <!--                app:menu_fab_label="목록 선택"을 지웠음-->
+
+
+
+                <!--                #41AF39 - 녹색 -->
+                <!--                백그라운드 컬러 반투명하게[   ]
+                                    애니메이션 이미지 누가 담당하는거지 -->
+                <!--                여기 이미지는 24px로만 가능 -->
+                <!--                국가 추가 하기                          -->
+<!--                <com.github.clans.fab.FloatingActionButton-->
+<!--                    android:id="@+id/menu_item_world"-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    app:fab_size="mini"-->
+<!--                    app:fab_label="국가 선택"-->
+<!--                    android:src="@drawable/worldwide1"-->
+<!--                    app:fab_colorNormal="#41AF39"-->
+<!--                    app:fab_colorPressed="#41AF39"-->
+<!--                    android:onClick="ClikNationSelction2"-->
+<!--                    />-->
+
+                <!--                 환율 계산하기                            -->
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/menu_item_calculator"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/calculator1"
+                    app:fab_colorNormal="#41AF39"
+                    app:fab_colorPressed="#41AF39"
+                    app:fab_size="mini"
+                    app:fab_label="환율 계산기"
+                    android:onClick="clickCalculator2"
+                    />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/menu_item3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/text"
+                    app:fab_colorNormal="#41AF39"
+                    app:fab_colorPressed="#41AF39"
+                    app:fab_size="mini"
+                    app:fab_label="텍스트 노트"
+                    android:onClick="clicktext2"
+                    />
+
+            </com.github.clans.fab.FloatingActionMenu>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+
+
+    <!--                         네비게이션 영역
+    -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:theme="@style/ThemeOverlay.AppCompat.navTheme"
+        app:headerLayout="@layout/z_navigation_header"
+        app:menu="@menu/nagigationviewcontent">
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

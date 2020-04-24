@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:contentPadding="4dp"
+    app:elevation="8dp"
+    android:id="@+id/cardviewlayoutroot"
+    android:layout_margin="8dp"
+    style="@style/AppTheme.cardview"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+<!--                                 요약                                       -->
+    <RelativeLayout
+        android:id="@+id/Relativelayout_cardview_title"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/iv_flag"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/a13_korea"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_nation_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="국가이름"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/iv_flag"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_dollar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/iv_flag"
+            android:text="통화종류"
+            android:textSize="12dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_below="@id/tv_nation_name"
+            />
+
+        <TextView
+            android:id="@+id/tv_dollar_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기준환율"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/iv_flag"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_alignBottom="@+id/iv_flag"
+            />
+
+        <TextView
+            android:id="@+id/cardview_news_dattime_global"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="세계시간"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:id="@+id/cardview_news_dattime_different"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시차"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+           android:layout_above="@+id/cardview_news_dattime_global"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/cardview_news_dattime_different_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간 차이"
+            android:layout_marginLeft="2dp"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/cardview_news_dattime_different"
+            android:layout_above="@+id/cardview_news_dattime_global"
+            />
+
+
+
+       <ImageView
+           android:id="@+id/iv_remoce_cancel"
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:src="@android:drawable/ic_menu_close_clear_cancel"
+           android:layout_alignParentRight="true"
+           />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_TodayC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@id/tv_TodayCC"
+            android:layout_alignBottom="@+id/cardview_news_dattime_global"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tv_TodayCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/cardview_news_dattime_global"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="-1dp"
+            android:text="℃"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_WeahterCondtion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_TodayC"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:text="날씨상태"
+            android:textSize="16sp"
+            />
+
+
+        <!--        -->
+
+    </RelativeLayout>
+
+        <!--    마지막으로 리니어로 한번 감싸야 내용들이 사라지지 않는다. -->
+
+        <!--                                 실행내용                                        -->
+        <!--        android:animateLayoutChanges="true" 이거 되긴 하는데 닫을때가 병신임 그래서 자바에서 다른거 사용하기로 함
+        주석으로 나중에 정리할 때 쓰지 말기 위해서 정리해놓자.
+        -->
+        <!--        여기에 들어갈 내용들은 날씨api, 네이버 로그인api가 될 것 같음. -->
+
+
+
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

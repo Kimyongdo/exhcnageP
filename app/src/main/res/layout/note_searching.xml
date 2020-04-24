@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/leftarrow"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            />
+
+        <EditText
+
+            android:layout_marginTop="10dp"
+            android:id="@+id/note_search2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:hint="노트 검색"
+            android:padding="5dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:background="@drawable/edit_text1"
+            android:textCursorDrawable="@drawable/notecursor"
+            android:layout_centerVertical="true"
+            />
+        <!--    inputtype은 글자밑 밑줄 제거 -->
+
+    </RelativeLayout>
+
+
+
+    <ListView
+        android:layout_marginTop="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notesearchlistview2" />
+
+
+
+</LinearLayout>

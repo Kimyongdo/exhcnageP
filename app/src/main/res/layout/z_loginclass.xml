@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="exchange.example.newopenapiexchangeproject3.KaKaoLoginclass">
+
+
+    <Button
+        android:id="@+id/kakao_custom_login"
+        android:layout_width="80dp"
+        android:layout_height="79dp"
+        android:background="@drawable/kakaotalk_icon"
+        android:layout_centerInParent="true"
+        />
+
+
+    <Button
+        android:id="@+id/kakao_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
+        android:onClick="kakao_logout"
+        android:layout_below="@+id/kakao_custom_login"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        />
+    <com.kakao.usermgmt.LoginButton
+        android:id="@+id/com_kakao_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

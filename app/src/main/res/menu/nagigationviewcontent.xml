@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/address"
+        android:icon="@drawable/phonebook"
+        android:title="주소록"
+        />
+    
+
+    <item
+        android:id="@+id/menu_note"
+        android:icon="@drawable/notepad"
+        android:title="노트북"
+        />
+
+
+    <!--    구분선 만들고 그 안에 넣으면 됨 -->
+    <item android:title="">
+
+
+        <menu>
+
+            <item android:id="@+id/newsSearch"
+                android:title="뉴스"
+                android:icon="@drawable/newspaper"
+
+                />
+
+            <item android:id="@+id/rubbish"
+                android:title="휴지통"
+                android:icon="@drawable/rubbish"
+                />
+
+            <item android:id="@+id/updateIcon"
+                android:title="업데이트"
+                android:icon="@drawable/notice"
+                />
+        </menu>
+    </item>
+
+</menu>

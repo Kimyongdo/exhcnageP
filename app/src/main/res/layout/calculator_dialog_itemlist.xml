@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardviewlayoutroot_second2"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:contentPadding="8dp"
+    android:elevation="4dp"
+    >
+
+
+
+
+    <LinearLayout
+        android:id="@+id/Linear_cardview_content_NS_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <!--#41AF39 -->
+        <ImageView
+            android:id="@+id/iv_nation_selection_alert"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/a13_korea"
+            android:layout_marginLeft="40dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_nation_selection_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="국가이름"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="25sp"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:id="@+id/NoteLinearLayout2"
+    >
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_note_time2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="제목줄"
+        />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:id="@+id/tv_note_title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:text="제목줄"
+        />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:id="@+id/tv_note_content2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내용"
+        />
+
+
+    <View
+        android:id="@+id/line22"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/update_tv_date"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="6dp"
+        android:background="#747474" />
+
+</LinearLayout>

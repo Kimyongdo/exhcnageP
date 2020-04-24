@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:weightSum="100"
+    tools:context="exchange.example.newopenapiexchangeproject3.NoteText">
+
+    <RelativeLayout
+        android:id="@+id/note_relayivelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        >
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_updateNote_second_camera"-->
+<!--            android:layout_width="18sp"-->
+<!--            android:layout_height="18sp"-->
+<!--            android:src="@drawable/photocamera"-->
+<!--            android:layout_alignParentRight="true"-->
+
+<!--            />-->
+
+        <ImageView
+            android:id="@+id/iv_updateNote_Second_done"
+            android:layout_width="18sp"
+            android:layout_height="18sp"
+            android:clickable="true"
+            android:src="@drawable/tick1"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/iv_updateNote_Second_done2"
+            android:layout_width="18sp"
+            android:layout_height="18sp"
+            android:clickable="true"
+            android:src="@drawable/leftarrow"
+            android:visibility="visible"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+        android:id="@+id/note_relayivelayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        >
+
+        <EditText
+            android:id="@+id/et_note_second_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/moon4"
+            android:hint="노트 제목"
+            android:background="@null"
+            android:textCursorDrawable="@drawable/notecursor"
+            android:layout_marginBottom="10dp"
+
+            >
+            <requestFocus/>
+        </EditText>
+
+
+
+        <!--        @null을 사용하여 밑줄제거가능 -->
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_note_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/notebookimage"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/notebook10"
+            android:layout_alignBottom="@+id/tv_note_group"
+
+
+            />
+
+        <TextView
+            android:id="@+id/tv_note_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="노트북"
+            android:textSize="16dp"
+            android:layout_toRightOf="@id/notebookimage"
+            android:layout_marginLeft="10dp"
+            android:layout_centerInParent="true"
+            />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#747474"
+            android:layout_below="@id/tv_note_group"
+            android:layout_marginTop="10dp"
+            />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/note_relayivelayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+
+        >
+
+        <EditText
+            android:id="@+id/et_note_second_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/moon4"
+            android:hint="작성을 시작해주세요"
+            android:textSize="20sp"
+            android:background="@null"
+            android:textCursorDrawable="@drawable/notecursor"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_camareaImage_second"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/et_note_second_content"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

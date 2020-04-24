@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="exchange.example.newopenapiexchangeproject3.CalCalculator"
+
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme.Toolbar">
+    </androidx.appcompat.widget.Toolbar>
+
+
+<RelativeLayout
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+   <ImageView
+       android:id="@+id/click_nation_flag"
+       android:layout_width="80dp"
+       android:layout_height="80dp"
+       android:src="@drawable/a13_korea"
+       android:onClick="clickNationKorea"
+       android:layout_marginLeft="25dp"
+       />
+
+    <!--        양수 소수점까지 입력가능-->
+
+    <!--    imeOptions="actionNone" - 완료를 눌러도 키패드가 꺼지지 않음. -->
+<!--    android:maxLength="25"오버플로우 오류가 난다고 하더이다.-->
+
+    <EditText
+        android:id="@+id/click_nation_et"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/click_nation_flag"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="-1dp"
+        android:layout_toRightOf="@id/click_nation_flag"
+        android:gravity="right"
+        android:imeOptions="actionNext"
+        android:inputType="numberDecimal"
+        android:maxLength="25" />
+<!--    android:background="@drawable/edit_text1"  보류해두기-->
+
+
+    <TextView
+        android:id="@+id/click_nation_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/click_nation_flag"
+        android:layout_marginLeft="10dp"
+        android:text="한국"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/click_nation_name_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/click_nation_flag"
+        android:layout_marginLeft="10dp"
+        android:text="KRW"
+        android:textSize="15sp"
+        android:layout_below="@+id/click_nation_name"
+        />
+
+</RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="  매매기준환율  "
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit_text1"
+        />
+
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!--        양수 소수점까지 입력가능-->
+
+        <ImageView
+            android:id="@+id/click_nation_flag2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="25dp"
+            android:onClick="clickNationOther"
+            android:src="@drawable/a22_usa" />
+
+        <EditText
+            android:id="@+id/click_nation_et2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/click_nation_flag2"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/click_nation_flag2"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionNext"
+            android:maxLength="25"
+            android:gravity="right"
+            />
+
+
+        <!--    imeOptions="actionNone" - 완료를 눌러도 키패드가 꺼지지 않음. -->
+<!--        gravity해야 숫자가 오른쪽<<< 왼쪽으로 가게 되어있음. -->
+
+        <TextView
+            android:id="@+id/click_nation_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/click_nation_flag2"
+            android:layout_marginLeft="10dp"
+            android:text="미국"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/click_nation_name2_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/click_nation_flag2"
+            android:layout_marginLeft="10dp"
+            android:text="USD"
+            android:textSize="15sp"
+            android:layout_below="@+id/click_nation_name2"
+            />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

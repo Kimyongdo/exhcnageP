@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardviewlayoutroot_second"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:contentPadding="8dp"
+    android:elevation="4dp"
+    >
+
+
+
+    <com.skyfishjy.library.RippleBackground
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content"
+        app:rb_color="#2F9D27"
+        app:rb_radius="40dp"
+        app:rb_rippleAmount="6"
+        app:rb_duration="2500"
+        app:rb_scale="4">
+
+
+    <LinearLayout
+        android:id="@+id/Linear_cardview_content_NS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+
+
+
+<!--        <net.igenius.customcheckbox.CustomCheckBox-->
+<!--            android:id="@+id/checkbox_cardview"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            app:duration="200"-->
+<!--            app:color_checked="#41AF39"/>-->
+<!--&lt;!&ndash;https://github.com/iGenius-Srl/android-custom-checkbox 체크박스 라이브러리&ndash;&gt;-->
+
+<!--#41AF39 -->
+        <ImageView
+            android:id="@+id/iv_nation_selection"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/a13_korea"
+            android:layout_marginLeft="40dp"
+            />
+
+    <TextView
+        android:id="@+id/tv_nation_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="국가이름"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="25sp"
+        />
+
+    </LinearLayout>
+    </com.skyfishjy.library.RippleBackground>
+
+</androidx.cardview.widget.CardView>

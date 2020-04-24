@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme.Toolbar">
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24sp">
+
+
+
+            <TextView
+                android:id="@+id/exchagne_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exchange Rate"
+                android:textSize="18sp"
+                />
+
+
+
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:id="@+id/iv_D_Nationflag"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:layout_below="@+id/exchagne_note"
+                />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/tv_D_NationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나라 이름"
+                android:textSize="20sp"
+                android:layout_toRightOf="@id/iv_D_Nationflag"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@+id/exchagne_note"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_D_NationMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="화폐단위"
+                android:textSize="20sp"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/iv_D_Nationflag"
+                android:layout_below="@+id/tv_D_NationName"
+                android:layout_marginTop="1dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_D_NationExchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="환율"
+                android:textSize="28sp"
+                android:layout_toRightOf="@id/iv_D_Nationflag"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@+id/tv_D_NationMoney"
+                />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#121212"
+                android:layout_below="@+id/tv_D_NationExchange"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/timenote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:layout_below="@+id/line"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_D_NationGlobalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="세계시간"
+                android:textSize="18sp"
+                android:layout_below="@+id/timenote"
+                />
+
+            <TextView
+                android:id="@+id/tv_D_NationNowTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="현재한국시간"
+                android:textSize="18sp"
+                android:layout_below="@+id/tv_D_NationGlobalTime"
+                android:layout_marginTop="5dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_D_NationNowTimeDifferent2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_D_NationNowTime"
+                android:layout_alignBottom="@+id/tv_D_NationGlobalTime"
+                android:text=""
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_D_NationNowTimeDifferent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_D_NationNowTime"
+                android:layout_alignBottom="@+id/tv_D_NationNowTime"
+                android:text=""
+                android:layout_marginTop="1dp"
+                android:textSize="22sp" />
+
+
+
+            <TextView
+                android:id="@+id/tv_D_NationNowTimeDifferent_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:layout_marginTop="100dp"
+                android:layout_toRightOf="@id/tv_D_NationNowTimeDifferent"
+                android:layout_alignBottom="@+id/tv_D_NationNowTime"
+                android:layout_marginLeft="2dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_D_timesubstract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="현재한국시간"
+                android:textSize="18sp"
+                android:layout_below="@+id/tv_D_NationNowTimeDifferent_note"
+                android:layout_marginTop="5dp"
+                />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#121212"
+                android:layout_below="@+id/tv_D_timesubstract"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/weather_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weather"
+                android:textSize="18sp"
+                android:layout_below="@id/line2"
+
+                />
+
+            <ImageView
+                android:id="@+id/iv_D_NationWeahterImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:text="날씨이미지"
+                android:textSize="20sp"
+                android:layout_below="@+id/tv_D_NationWeahterCountry"
+                />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#121212"
+                android:layout_below="@+id/iv_D_NationWeahterImage"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_D_NationWeahterCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weather_note"
+                android:layout_marginTop="10dp"
+                android:text="나라이름"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_D_NationWeahterCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="도시이름"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_D_NationWeahterCountry"
+                android:layout_alignBottom="@+id/tv_D_NationWeahterCountry"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_D_NationWeahterTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_D_NationWeahterCity"
+                android:layout_toRightOf="@+id/iv_D_NationWeahterImage"
+                android:layout_alignLeft="@+id/tv_D_NationName"
+                android:text="현재기온"
+                android:textSize="40sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_D_NationWeahterTemp_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_D_NationWeahterCity"
+                android:layout_toRightOf="@+id/tv_D_NationWeahterTemp"
+                android:layout_alignTop="@+id/tv_D_NationWeahterTemp"
+                android:text="℃"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/new_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="News"
+                android:textSize="18sp"
+                android:layout_below="@+id/line3"
+                />
+
+            <TextView
+                android:id="@+id/tv_D_WeatherCondition_note2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_D_NationWeahterTemp"
+                android:layout_toRightOf="@+id/iv_D_NationWeahterImage"
+                android:text="날씨"
+                android:layout_alignLeft="@+id/tv_D_NationName"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_D_WeatherCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_D_NationWeahterTemp"
+                android:layout_toRightOf="@+id/tv_D_WeatherCondition_note2"
+                android:layout_alignBottom="@+id/tv_D_WeatherCondition_note2"
+                android:layout_marginLeft="5dp"
+                android:text="현재날씨"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_D_WeatherHumidity_note2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_D_WeatherCondition"
+                android:layout_toRightOf="@+id/iv_D_NationWeahterImage"
+                android:text="습도"
+                android:textSize="16sp"
+                android:layout_alignLeft="@+id/tv_D_NationName"
+                android:layout_marginTop="5dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_D_WeatherHumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_D_WeatherCondition"
+                android:layout_toRightOf="@+id/tv_D_WeatherHumidity_note2"
+                android:text="습도"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_D_WeatherHumidity_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_D_WeatherCondition"
+                android:layout_toRightOf="@+id/tv_D_WeatherHumidity"
+                android:text="%"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                />
+
+
+
+            <TextView
+                android:id="@+id/tv_D_WeatherWind_note2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_D_WeatherCondition"
+                android:layout_toRightOf="@+id/tv_D_WeatherHumidity_note"
+                android:text="풍속"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_D_WeatherWind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_D_WeatherCondition"
+                android:layout_toRightOf="@+id/tv_D_WeatherWind_note2"
+                android:text="풍속"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_D_WeatherWind_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_D_WeatherCondition"
+                android:layout_toRightOf="@+id/tv_D_WeatherWind"
+                android:text="m/s"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_newstitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="뉴스일기1"
+                android:textSize="18sp"
+                android:layout_below="@+id/new_note"
+                android:lineSpacingExtra ="5dp"
+
+
+                />
+            <TextView
+                android:id="@+id/tv_newstitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="뉴스일기2"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv_newstitle1"
+                android:lineSpacingExtra ="5dp"
+                />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_newstitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="뉴스일기3"
+                android:textSize="18sp"
+                android:layout_below="@+id/tv_newstitle2"
+                android:lineSpacingExtra ="5dp"
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
