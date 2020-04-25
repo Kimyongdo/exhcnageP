@@ -1,4 +1,4 @@
-package exchange.example.newopenapiexchangeproject3;
+package exchange.example.newopenapiexchangeproject3.Adpater;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,6 +12,8 @@ import com.bumptech.glide.Glide;
 import com.example.newopenapiexchangeproject3.R;
 
 import java.util.ArrayList;
+
+import exchange.example.newopenapiexchangeproject3.VO.CalAlertVO;
 
 public class CalDialogAdapter extends BaseAdapter {
 

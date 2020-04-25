@@ -2,9 +2,7 @@ package exchange.example.newopenapiexchangeproject3;
 
 
 
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -14,6 +12,8 @@ import com.android.volley.error.VolleyError;
 import com.android.volley.request.StringRequest;
 
 import exchange.example.newopenapiexchangeproject3.NaverSearchApi.SearchApi;
+import exchange.example.newopenapiexchangeproject3.VO.NewsSearchVO;
+
 import com.google.gson.Gson;
 
 import java.io.UnsupportedEncodingException;

@@ -41,6 +41,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
+import exchange.example.newopenapiexchangeproject3.VO.NoteVO;
+import exchange.example.newopenapiexchangeproject3.screen.Address;
+import exchange.example.newopenapiexchangeproject3.screen.CalCalculator;
+
 import static exchange.example.newopenapiexchangeproject3.JsonExchangeRate.cur_nm;
 import static exchange.example.newopenapiexchangeproject3.KaKaoLoginclass.KAKAOLOGIN;
 import static exchange.example.newopenapiexchangeproject3.KaKaoLoginclass.KAKAOLOGOUT;
@@ -110,7 +114,7 @@ public class NoteMain extends AppCompatActivity {
                         drawerLayout.closeDrawer(navigationView); //클릭 후 네비뷰 닫힘
                         break;
                     case R.id.address:
-                        Intent intent1 = new Intent(NoteMain.this,Address.class); //여기로 들어가면 로그인 하도록 하고 싶은뎅.
+                        Intent intent1 = new Intent(NoteMain.this, Address.class); //여기로 들어가면 로그인 하도록 하고 싶은뎅.
                         startActivity(intent1);
                         drawerLayout.closeDrawer(navigationView); //클릭 후 네비뷰 닫힘
                         break;

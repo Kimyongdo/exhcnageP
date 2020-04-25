@@ -45,6 +45,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import exchange.example.newopenapiexchangeproject3.VO.NoteVO;
+
 import static exchange.example.newopenapiexchangeproject3.MainActivity.nicknumber;
 import static exchange.example.newopenapiexchangeproject3.NoteMain.noteAdapter;
 import static exchange.example.newopenapiexchangeproject3.NoteText.notelist;

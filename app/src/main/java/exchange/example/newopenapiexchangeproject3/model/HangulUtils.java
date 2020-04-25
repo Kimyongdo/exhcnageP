@@ -1,4 +1,4 @@
-package exchange.example.newopenapiexchangeproject3;
+package exchange.example.newopenapiexchangeproject3.model;
 
 /**
  * com.ziofront.utils

@@ -1,4 +1,4 @@
-package exchange.example.newopenapiexchangeproject3;
+package exchange.example.newopenapiexchangeproject3.screen;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -19,6 +19,10 @@ import com.example.newopenapiexchangeproject3.R;
 
 import java.util.ArrayList;
 import java.util.Locale;
+
+import exchange.example.newopenapiexchangeproject3.Adpater.AddressAdapter;
+import exchange.example.newopenapiexchangeproject3.model.HangulUtils;
+import exchange.example.newopenapiexchangeproject3.VO.AdressVO;
 
 
 public class Address extends AppCompatActivity {

@@ -15,14 +15,10 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -48,6 +44,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
+import exchange.example.newopenapiexchangeproject3.VO.NoteVO;
 
 import static exchange.example.newopenapiexchangeproject3.MainActivity.nicknumber;
 
@@ -85,29 +83,6 @@ public class NoteText extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.note_text);
-
-        ///////////////////////////카메라를 사용하는 경우/////////////////////////////////////////////
-        //ivCamera = findViewById(R.id.iv_updateNote_first_camera);
-        //ivCemeraImage = findViewById(R.id.iv_camareaImage);
-
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){ //sdk version이 마시멜로우보다 높은 겨우
-            if(checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)== PackageManager.PERMISSION_DENIED){ //처음에 거부되어있다면
-                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},10); //허가여부 다이얼로그 확인.
-            }
-        }
-
-
-        //카메라 이미지 선택시.
-//        ivCamera.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//                setImageUri();
-//                if(imgUri!=null) intent.putExtra(MediaStore.EXTRA_OUTPUT, imgUri);
-//                startActivityForResult(intent, 1000);
-//            }
-//        });
-        ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
         //연결

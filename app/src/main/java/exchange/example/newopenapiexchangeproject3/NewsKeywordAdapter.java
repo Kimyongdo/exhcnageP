@@ -3,10 +3,6 @@ package exchange.example.newopenapiexchangeproject3;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.Color;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
-import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newopenapiexchangeproject3.R;
@@ -26,6 +21,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+
+import exchange.example.newopenapiexchangeproject3.VO.NewsKeywordVO;
 
 import static exchange.example.newopenapiexchangeproject3.NewsPaper.keywodsDatas;
 import static exchange.example.newopenapiexchangeproject3.NewsPaper.newsAdapter;

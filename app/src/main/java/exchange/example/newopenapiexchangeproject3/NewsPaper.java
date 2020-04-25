@@ -5,11 +5,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -27,7 +24,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-import static exchange.example.newopenapiexchangeproject3.NewsNaverSearch.newsNumber;
+import exchange.example.newopenapiexchangeproject3.VO.NewsKeywordVO;
+import exchange.example.newopenapiexchangeproject3.VO.NewsSearchVO;
 
 public class NewsPaper extends AppCompatActivity {
 

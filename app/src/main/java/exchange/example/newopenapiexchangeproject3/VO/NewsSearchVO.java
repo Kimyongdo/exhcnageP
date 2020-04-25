@@ -1,4 +1,4 @@
-package exchange.example.newopenapiexchangeproject3;
+package exchange.example.newopenapiexchangeproject3.VO;
 
 public class NewsSearchVO {
     private String newsTitle;

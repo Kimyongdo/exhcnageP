@@ -27,6 +27,9 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import exchange.example.newopenapiexchangeproject3.VO.NoteRubbishVO;
+import exchange.example.newopenapiexchangeproject3.screen.Address;
+
 import static exchange.example.newopenapiexchangeproject3.KaKaoLoginclass.KAKAOLOGIN;
 import static exchange.example.newopenapiexchangeproject3.KaKaoLoginclass.KAKAOLOGOUT;
 import static exchange.example.newopenapiexchangeproject3.MainActivity.kakaodatas;
@@ -87,7 +90,7 @@ public class NoteRubbish extends AppCompatActivity {
                         drawerLayout.closeDrawer(navigationView); //클릭 후 네비뷰 닫힘
                         break;
                     case R.id.address:
-                        Intent intent1 = new Intent(NoteRubbish.this,Address.class); //여기로 들어가면 로그인 하도록 하고 싶은뎅.
+                        Intent intent1 = new Intent(NoteRubbish.this, Address.class); //여기로 들어가면 로그인 하도록 하고 싶은뎅.
                         startActivity(intent1);
                         drawerLayout.closeDrawer(navigationView); //클릭 후 네비뷰 닫힘
                         break;

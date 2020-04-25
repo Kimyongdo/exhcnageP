@@ -1,4 +1,4 @@
-package exchange.example.newopenapiexchangeproject3;
+package exchange.example.newopenapiexchangeproject3.util;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;

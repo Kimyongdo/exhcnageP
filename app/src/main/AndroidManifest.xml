@@ -23,7 +23,7 @@
             />
         <activity android:name="exchange.example.newopenapiexchangeproject3.NoteRubbish" />
         <activity android:name="exchange.example.newopenapiexchangeproject3.NoteSearching" />
-        <activity android:name="exchange.example.newopenapiexchangeproject3.Address" /> <!-- android:name=".GlobalApplication"으로 우선 위에다가 추가함. -->
+        <activity android:name="exchange.example.newopenapiexchangeproject3.screen.Address" /> <!-- android:name=".GlobalApplication"으로 우선 위에다가 추가함. -->
         <activity android:name="exchange.example.newopenapiexchangeproject3.KaKaoLoginclass" />
         <activity android:name="exchange.example.newopenapiexchangeproject3.NoteInText" />
         <activity android:name="exchange.example.newopenapiexchangeproject3.NoteText" />
@@ -31,7 +31,7 @@
         <activity android:name="exchange.example.newopenapiexchangeproject3.UpdateNote" />
         <activity android:name="exchange.example.newopenapiexchangeproject3.UpdateMain" />
         <activity
-            android:name="exchange.example.newopenapiexchangeproject3.CalCalculator"
+            android:name="exchange.example.newopenapiexchangeproject3.screen.CalCalculator"
             android:windowSoftInputMode="stateAlwaysVisible" />
         <activity android:name="exchange.example.newopenapiexchangeproject3.NationIntent" />
         <activity android:name="exchange.example.newopenapiexchangeproject3.newsWebview" />

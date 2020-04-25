@@ -20,10 +20,10 @@ import java.util.Map;
 
 public class JsonExchangeRate {
      public static ExchangeMoney[] exchangeMonies;
-     static ArrayList<String> cur_nm=new ArrayList<>();
-     static ArrayList<String> cur_unit=new ArrayList<>();
-     static ArrayList<String> kftc_deal_bas_r=new ArrayList<>();
-     static ArrayList<Integer> iv_nationflag=new ArrayList<>();
+        public static ArrayList<String> cur_nm=new ArrayList<>();
+    public static ArrayList<String> cur_unit=new ArrayList<>();
+    public static ArrayList<String> kftc_deal_bas_r=new ArrayList<>();
+    public  static ArrayList<Integer> iv_nationflag=new ArrayList<>();
 
     /////////////////////////////////대량의데이터 정보요청///////////////////////////////////
     public void sendRequest(){

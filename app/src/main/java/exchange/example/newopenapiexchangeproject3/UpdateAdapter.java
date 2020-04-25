@@ -17,6 +17,8 @@ import com.example.newopenapiexchangeproject3.R;
 
 import java.util.ArrayList;
 
+import exchange.example.newopenapiexchangeproject3.VO.UpdateVO;
+
 public class UpdateAdapter extends RecyclerView.Adapter {
     Context context;
     ArrayList<UpdateVO> updateVOS;
@@ -53,6 +55,8 @@ public class UpdateAdapter extends RecyclerView.Adapter {
     public int getItemCount() {
         return updateVOS.size();
     }
+
+
 
     class UpdateVH extends RecyclerView.ViewHolder{
         TextView Updatetitle;

@@ -1,4 +1,4 @@
-package exchange.example.newopenapiexchangeproject3;
+package exchange.example.newopenapiexchangeproject3.Adpater;
 
 import android.content.Context;
 import android.content.Intent;
@@ -23,6 +23,11 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
+import exchange.example.newopenapiexchangeproject3.Itemlist;
+import exchange.example.newopenapiexchangeproject3.JsonExchangeRate;
+import exchange.example.newopenapiexchangeproject3.NationIntent;
+import exchange.example.newopenapiexchangeproject3.SearchNaverJson1;
+
 import static exchange.example.newopenapiexchangeproject3.JsonExchangeRate.cur_nm;
 import static exchange.example.newopenapiexchangeproject3.JsonExchangeRate.exchangeMonies;
 import static exchange.example.newopenapiexchangeproject3.MainActivity.datas;
@@ -30,6 +35,7 @@ import static exchange.example.newopenapiexchangeproject3.MainActivity.datas;
 public class MainRecylcerAdapter extends RecyclerView.Adapter {
     ArrayList<Itemlist> datasCopy;
     Context context;
+
     public MainRecylcerAdapter(ArrayList<Itemlist> datasCopy, Context context) {
         this.datasCopy = datasCopy;
         this.context = context;
@@ -37,7 +43,7 @@ public class MainRecylcerAdapter extends RecyclerView.Adapter {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
+        //context가 필요한 경우 (intet)
         LayoutInflater inflater = LayoutInflater.from(context);
         View itemView = inflater.inflate(R.layout.activity_cardview_recylcer, parent, false);
         VH vh = new VH(itemView);
@@ -128,7 +134,7 @@ public class MainRecylcerAdapter extends RecyclerView.Adapter {
                 @Override
                 public void onClick(View view) {
                     int a= getAdapterPosition();
-                    a=a%JsonExchangeRate.cur_unit.size(); //리스트뷰에 일어날 오류.
+                    a=a% JsonExchangeRate.cur_unit.size(); //리스트뷰에 일어날 오류.
                     //Log.d("선택번호",a+"");
                     SearchNaverJson1 searchNaverJson1 = new SearchNaverJson1();
                     for(int i=0; i<JsonExchangeRate.cur_unit.size(); i++){

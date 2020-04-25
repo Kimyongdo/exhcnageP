@@ -26,6 +26,9 @@ import com.example.newopenapiexchangeproject3.R;
 import java.util.HashMap;
 import java.util.Map;
 
+import exchange.example.newopenapiexchangeproject3.VO.NoteRubbishVO;
+import exchange.example.newopenapiexchangeproject3.VO.NoteVO;
+
 import static exchange.example.newopenapiexchangeproject3.MainActivity.nicknumber;
 import static exchange.example.newopenapiexchangeproject3.NoteRubbish.rubbishlist;
 import static exchange.example.newopenapiexchangeproject3.NoteText.notelist;

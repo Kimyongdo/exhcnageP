@@ -1,4 +1,4 @@
-package exchange.example.newopenapiexchangeproject3;
+package exchange.example.newopenapiexchangeproject3.screen;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -29,6 +29,11 @@ import com.example.newopenapiexchangeproject3.R;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+
+import exchange.example.newopenapiexchangeproject3.Adpater.CalDialogAdapter;
+import exchange.example.newopenapiexchangeproject3.JsonExchangeRate;
+import exchange.example.newopenapiexchangeproject3.MainActivity;
+import exchange.example.newopenapiexchangeproject3.VO.CalAlertVO;
 
 import static exchange.example.newopenapiexchangeproject3.JsonExchangeRate.kftc_deal_bas_r;
 
@@ -261,7 +266,7 @@ public class CalCalculator extends AppCompatActivity  {
        ////////////////////////////////////////////////////////////////////////////////
 
         //다이얼로그 리사이클러뷰
-        for(int i=0; i<JsonExchangeRate.cur_unit.size(); i++){
+        for(int i = 0; i< JsonExchangeRate.cur_unit.size(); i++){
             dialog_arraylist.add(new CalAlertVO(JsonExchangeRate.cur_nm.get(i), JsonExchangeRate.iv_nationflag.get(i)));
         }
 
@@ -272,7 +277,7 @@ public class CalCalculator extends AppCompatActivity  {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case android.R.id.home :{
-                Intent intent = new Intent(this,MainActivity.class);
+                Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
             }
         }

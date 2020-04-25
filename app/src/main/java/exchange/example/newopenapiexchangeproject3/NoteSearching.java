@@ -6,18 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.newopenapiexchangeproject3.R;
 
 import java.util.ArrayList;
+
+import exchange.example.newopenapiexchangeproject3.VO.NoteVO;
+import exchange.example.newopenapiexchangeproject3.model.HangulUtils;
 
 public class NoteSearching extends AppCompatActivity {
 

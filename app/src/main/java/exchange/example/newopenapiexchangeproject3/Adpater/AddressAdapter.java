@@ -1,4 +1,4 @@
-package exchange.example.newopenapiexchangeproject3;
+package exchange.example.newopenapiexchangeproject3.Adpater;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.example.newopenapiexchangeproject3.R;
 
 import java.util.ArrayList;
+
+import exchange.example.newopenapiexchangeproject3.VO.AdressVO;
 
 public class AddressAdapter extends BaseAdapter {
     Context context;

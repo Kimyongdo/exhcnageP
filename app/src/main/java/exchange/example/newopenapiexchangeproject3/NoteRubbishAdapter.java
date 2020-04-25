@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.example.newopenapiexchangeproject3.R;
 
+import exchange.example.newopenapiexchangeproject3.VO.NoteRubbishVO;
+
 import static exchange.example.newopenapiexchangeproject3.NoteRubbish.rubbishlist;
 
 public class NoteRubbishAdapter extends BaseAdapter {

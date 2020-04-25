@@ -11,6 +11,8 @@ import com.example.newopenapiexchangeproject3.R;
 
 import java.util.ArrayList;
 
+import exchange.example.newopenapiexchangeproject3.VO.NoteVO;
+
 public class NoteSearchAdapter extends BaseAdapter {
     Context context;
     ArrayList<NoteVO> testlistcopy;

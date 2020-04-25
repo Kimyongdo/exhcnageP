@@ -15,9 +15,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.Signature;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -42,6 +40,12 @@ import com.example.newopenapiexchangeproject3.R;
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.material.navigation.NavigationView;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -49,13 +53,18 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import exchange.example.newopenapiexchangeproject3.Adpater.MainRecylcerAdapter;
+import exchange.example.newopenapiexchangeproject3.Adpater.natioDialongSelctionAdapter;
+import exchange.example.newopenapiexchangeproject3.VO.nationVO;
+import exchange.example.newopenapiexchangeproject3.model.HangulUtils;
+import exchange.example.newopenapiexchangeproject3.screen.Address;
+import exchange.example.newopenapiexchangeproject3.screen.CalCalculator;
 
 import static exchange.example.newopenapiexchangeproject3.JsonExchangeRate.exchangeMonies;
 import static exchange.example.newopenapiexchangeproject3.KaKaoLoginclass.KAKAOLOGIN;
@@ -64,9 +73,8 @@ import static exchange.example.newopenapiexchangeproject3.KaKaoLoginclass.KAKAOL
 
 public class MainActivity extends AppCompatActivity {
 
-    //https://openweathermap.org/api/hourly-forecast 날씨 - json뷰로 도시 id추가 가능
-
     //날짜
+
     static ArrayList<String> CanlenderTime=new ArrayList<>();
     //퍼미션
     public static final int PHONEPERMISSION = 431;
@@ -166,13 +174,19 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState(); //화살표모양->삼선모양
 
 
-        //주소록 퍼미션 만들기.
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){ //sdk version이 마시멜로우보다 높은 겨우
-            int chekcedPersmission =checkSelfPermission(Manifest.permission.READ_CONTACTS);
-            if(chekcedPersmission== PackageManager.PERMISSION_DENIED){ //처음에 거부되어있다면
-                requestPermissions(new String[]{Manifest.permission.READ_CONTACTS},PHONEPERMISSION); //허가여부 다이얼로그 확인.
+        Dexter.withActivity(this)
+                .withPermissions(
+                        Manifest.permission.READ_CONTACTS,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE
+                ).withListener(new MultiplePermissionsListener() {
+            @Override public void onPermissionsChecked(MultiplePermissionsReport report) {
+                Toast.makeText(context, "허가 확인", Toast.LENGTH_SHORT).show();
             }
-        }
+            @Override public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
+                Toast.makeText(context, "허가 취소", Toast.LENGTH_SHORT).show();
+
+            }
+        }).check();
 
         //데이터로드하기.
         Dataload();
@@ -198,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawer(navigationView);
                         break;
                     case R.id.address:
-                        Intent intent1 = new Intent(MainActivity.this,Address.class);
+                        Intent intent1 = new Intent(MainActivity.this, Address.class);
                         startActivity(intent1);
                         drawerLayout.closeDrawer(navigationView);
                         break;
@@ -220,9 +234,6 @@ public class MainActivity extends AppCompatActivity {
         ///////////////////////////////////////새로고침 기능////////////////////////////////////////////////////////
         swipeRefreshLayout = findViewById(R.id.layout_refresh);
         swiperefresh();//드래그시 이 함수 호출
-
-        ////////////////////////////////////////////카카오 기능//////////////////////////////////////////////////
-        //getHashKey();오프라인 카카오톡 로그인시 필요한 해시키.
 
         //카카오 데이터 함수 호출
         DataloadKakao();
@@ -412,7 +423,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        UpdateDataLoad();
+       //UpdateDataLoad
+
     }
 
 
@@ -698,10 +710,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
     public void SetData(int i, int k){
-        datasCopy.set(i,new Itemlist(JsonExchangeRate.cur_nm.get(k), JsonExchangeRate.cur_unit.get(k), JsonExchangeRate.kftc_deal_bas_r.get(k), JsonExchangeRate.iv_nationflag.get(k)
-                , GlobalTime.newstime2, GlobalTime.dateFormat2[k].format(GlobalTime.date2),
-                WeatherJSonArray.todayC1[k], WeatherJSonArray.todayweather[k], GlobalTime.timedifferent[k]
-        ));
+        if(datasCopy.size() == 0){
+            return;
+        }else{
+            datasCopy.set(i,new Itemlist(JsonExchangeRate.cur_nm.get(k), JsonExchangeRate.cur_unit.get(k), JsonExchangeRate.kftc_deal_bas_r.get(k), JsonExchangeRate.iv_nationflag.get(k)
+                    , GlobalTime.newstime2, GlobalTime.dateFormat2[k].format(GlobalTime.date2),
+                    WeatherJSonArray.todayC1[k], WeatherJSonArray.todayweather[k], GlobalTime.timedifferent[k]
+            ));
+        }
+
     }
 
 

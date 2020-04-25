@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 
 import com.android.volley.Request;
@@ -24,6 +23,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+
+import exchange.example.newopenapiexchangeproject3.VO.UpdateVO;
 
 public class UpdateMain extends AppCompatActivity {
 
